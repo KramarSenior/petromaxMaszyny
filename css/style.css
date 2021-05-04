@@ -30,15 +30,24 @@ body {
     background-size: cover;
     background-position: center;
     clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-    
+
 }
 
 .header--title{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.header--title__text{
     color: white;
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+
 }
 
 .text__up{
@@ -69,7 +78,7 @@ body {
         transform: translateX(30px);  
       }
 
-    1000% {
+    100% {
         opacity: 0;
         transform: translateX(0px);  
       }
@@ -86,8 +95,50 @@ body {
         transform: translateX(-30px);  
       }
 
-    1000% {
+    100% {
         opacity: 0;
         transform: translateX(0px);  
       }
+}
+
+@keyframes moveInBtn {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);  
+      }
+  
+      100% {
+          opacity: 0;
+          transform: translateX(0px);  
+        }
+}
+
+.btn:link,
+.btn:visited {
+    text-decoration: none;
+    padding: 15px 45px;
+    margin-top: 200px;
+    border-radius: 100px;
+    transition: all .5s;
+    display: inline-block;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgb(0, 0, 0, .2);
+}
+
+.btn-white{
+    background-color: white;
+    color: #777;
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow:  0 5px 10px rgb(0, 0, 0, .2);
+}
+
+.btn-animated {
+    animation: moveInBtn 1s ease-out .75s;
 }
