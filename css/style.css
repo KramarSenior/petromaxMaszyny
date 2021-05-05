@@ -26,7 +26,7 @@ body {
 
 .header {
     height: 95vh;
-    background-image: linear-gradient(to right bottom, rgba(230, 92, 0, 0.85), rgb(255, 163, 102, 0.8)), url("../img/kop-header.jpg");
+    background-image: linear-gradient(to right bottom, rgba(230, 92, 0, 0.85), rgb(255, 163, 102, 0.8)), url("../img/kop-1.jpg");
     background-size: cover;
     background-position: center;
     clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
@@ -35,22 +35,21 @@ body {
 
 .header--title{
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
 }
 
-.header--title__text{
+.header--title__mainText{
     color: white;
-    position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    margin-bottom: 60px;
 
 }
 
-.text__up{
+.header--title__mainText-main{
     display: block;
     font-size: 75px;
     font-weight: 400;
@@ -59,14 +58,17 @@ body {
     animation: moveInRight 1s;
 }
 
-.text__down{
+.header--title__mainText-sub{
     display: block;
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 15px;
     animation: moveInLeft 1s;
 }
-
+/** 
+-   Animations
+-
+*/
 @keyframes moveInRight {
     0% {
       opacity: 0;
@@ -79,7 +81,7 @@ body {
       }
 
     100% {
-        opacity: 0;
+        opacity: 1;
         transform: translateX(0px);  
       }
     
@@ -96,7 +98,7 @@ body {
       }
 
     100% {
-        opacity: 0;
+        opacity: 1;
         transform: translateX(0px);  
       }
 }
@@ -104,12 +106,12 @@ body {
 @keyframes moveInBtn {
     0% {
         opacity: 0;
-        transform: translateX(-30px);  
+        transform: translateY(40px);  
       }
   
       100% {
-          opacity: 0;
-          transform: translateX(0px);  
+          opacity: 1;
+          transform: translateY(0px);  
         }
 }
 
@@ -117,7 +119,6 @@ body {
 .btn:visited {
     text-decoration: none;
     padding: 15px 45px;
-    margin-top: 200px;
     border-radius: 100px;
     transition: all .5s;
     display: inline-block;
@@ -129,16 +130,18 @@ body {
     box-shadow: 0 10px 20px rgb(0, 0, 0, .2);
 }
 
-.btn-white{
-    background-color: white;
-    color: #777;
-}
-
 .btn:active {
     transform: translateY(-1px);
     box-shadow:  0 5px 10px rgb(0, 0, 0, .2);
 }
 
+.btn-white{
+    background-color: white;
+    color: #777;
+}
+
 .btn-animated {
-    animation: moveInBtn 1s ease-out .75s;
+    animation: moveInBtn 0.5s ease-in-out .75s;
+    animation-fill-mode: backwards;
+
 }
