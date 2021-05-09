@@ -69,7 +69,7 @@ body {
   font-size: 4.5rem;
   font-weight: 700;
   letter-spacing: 4px;
-  background-image: linear-gradient(to right, #ffa366, #ff6600);
+  background-image: linear-gradient(to right, #fcaa74, #ff6600);
   display: inline-block;
   -webkit-background-clip: text;
   color: transparent;
@@ -99,6 +99,15 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
 
+.u-margin-top-big {
+  margin-top: 1.5rem; }
+
+.u-margin-top-big {
+  margin-top: 4rem; }
+
+.u-margin-top-big {
+  margin-top: 10rem; }
+
 .btn:link, .btn:visited {
   text-decoration: none;
   padding: 1.5rem 4.5rem;
@@ -119,6 +128,10 @@ body {
 .btn-white {
   background-color: #fff;
   color: #777; }
+
+.btn--orange {
+  background-color: #ff8533;
+  color: #fff; }
 
 .btn-animated {
   animation: moveInBtn 0.5s ease-in-out 0.75s;
@@ -142,6 +155,89 @@ body {
 .btn-text:active {
   transform: translateY(0px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 52rem; }
+  .card__side {
+    border-radius: 3px;
+    height: 52rem;
+    transition: all 0.8s ease;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    overflow: hidden; }
+    .card__side--front {
+      background-color: #fff; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #fcaa74, #ff6600); }
+  .card:hover .card__side--front {
+    transform: rotateY(180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__background {
+    height: 23rem;
+    background-size: cover;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .card__background--1 {
+      background-image: linear-gradient(to right bottom, #fcaa74, #ff6600), url("../img/kop-3.jpg"); }
+    .card__background--2 {
+      background-image: linear-gradient(to right bottom, #fcaa74, #ff6600), url("../img/kop-3.jpg"); }
+    .card__background--3 {
+      background-image: linear-gradient(to right bottom, #fcaa74, #ff6600), url("../img/kop-3.jpg"); }
+  .card__header {
+    font-size: 3.1rem;
+    font-weight: 300;
+    color: #fff;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    text-align: right;
+    width: 50%; }
+  .card__header-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card__header-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(252, 170, 116, 0.85), rgba(255, 102, 0, 0.85)); }
+  .card__details {
+    padding: 3rem; }
+    .card__details ul {
+      list-style: none;
+      margin: 0 auto;
+      padding: 1rem; }
+      .card__details ul li {
+        padding: 1rem;
+        font-size: 1.5rem;
+        text-align: center; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #eee; }
+  .card__back {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    width: 90%; }
+    .card__back--header {
+      margin-bottom: 4rem;
+      font-size: 3rem;
+      text-transform: uppercase; }
+    .card__back--price {
+      font-size: 6rem;
+      font-weight: 100;
+      margin-bottom: 6rem; }
 
 .composition {
   position: relative; }
@@ -180,7 +276,7 @@ body {
   .features-box__icon {
     font-size: 6rem;
     display: inline-block;
-    background-image: linear-gradient(to right, #ffa366, #ff6600);
+    background-image: linear-gradient(to right, #fcaa74, #ff6600);
     -webkit-background-clip: text;
     color: transparent; }
   .features-box:hover {
@@ -214,7 +310,7 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(255, 163, 102, 0.85), rgba(255, 163, 102, 0.8)), url("../img/kop-1.jpg");
+  background-image: linear-gradient(to right bottom, rgba(252, 170, 116, 0.85), rgba(255, 102, 0, 0.8)), url("../img/kop-1.jpg");
   background-size: cover;
   background-position: center;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
@@ -226,15 +322,20 @@ body {
     text-align: center; }
 
 .section-about {
-  background-color: #ebdede;
+  background-color: #f5f5f5;
   padding: 25rem 0;
   margin-top: -25vh; }
 
 .section-features {
-  background-image: linear-gradient(to right, rgba(255, 163, 102, 0.8), rgba(255, 102, 0, 0.88)), url("../img/zdjęcia_maszyn/PETROMAX_920/20210225_111107.jpg");
+  background-image: linear-gradient(to right, rgba(252, 170, 116, 0.8), rgba(255, 102, 0, 0.88)), url("../img/zdjęcia_maszyn/PETROMAX_920/20210225_111107.jpg");
   padding: 20rem 0;
   background-size: cover;
   margin-top: -13rem;
   transform: skewY(-7deg); }
   .section-features > * {
     transform: skewY(7deg); }
+
+.section-machines {
+  background-color: #f5f5f5;
+  padding: 25rem 0;
+  padding: 25rem 0 15rem 0; }
