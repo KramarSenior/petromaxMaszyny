@@ -69,11 +69,12 @@ body {
   font-size: 4.5rem;
   font-weight: 700;
   letter-spacing: 4px;
-  background-image: linear-gradient(to right, #55c57a, #28b485);
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
   display: inline-block;
   -webkit-background-clip: text;
   color: transparent;
-  transition: all .3s; }
+  transition: all .3s;
+  text-transform: uppercase; }
 
 .heading-third {
   text-transform: uppercase;
@@ -141,7 +142,7 @@ body {
   color: #777; }
 
 .btn--green {
-  background-color: #7ed56f;
+  background-color: #55c57a;
   color: #fff; }
 
 .btn-animated {
@@ -152,13 +153,13 @@ body {
   text-decoration: none;
   font-size: 2.75rem;
   font-weight: 700;
-  color: #7ed56f;
+  color: #55c57a;
   display: inline-block;
   padding: 3px;
-  border-bottom: 1px solid #7ed56f; }
+  border-bottom: 1px solid #55c57a; }
 
 .btn-text:hover {
-  background-color: #7ed56f;
+  background-color: #55c57a;
   color: #fff;
   transition: all .2s;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -190,7 +191,7 @@ body {
     .card__side--back {
       transform: rotateY(180deg); }
       .card__side--back-1 {
-        background-image: linear-gradient(to right bottom, #55c57a, #28b485); }
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
       .card__side--back-2 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
       .card__side--back-3 {
@@ -206,7 +207,7 @@ body {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
     .card__background--1 {
-      background-image: linear-gradient(to right bottom, #55c57a, #28b485), url("../img/kop-3.jpg"); }
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("../img/kop-3.jpg"); }
     .card__background--2 {
       background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("../img/kop-3.jpg"); }
     .card__background--3 {
@@ -225,7 +226,7 @@ body {
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone; }
     .card__header-span--1 {
-      background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.85), rgba(40, 180, 133, 0.85)); }
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
     .card__header-span--2 {
       background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
     .card__header-span--3 {
@@ -286,6 +287,41 @@ body {
     transform: scale(0.91);
     filter: brightness(100%); }
 
+.form__group:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.form__input {
+  background-color: rgba(255, 255, 255, 0.5);
+  font-family: inherit;
+  color: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  display: block;
+  border: none;
+  font-size: 1.75rem;
+  border-bottom: 3px solid transparent;
+  width: 90%; }
+  .form__input:focus {
+    outline: none;
+    border-bottom: 3px solid #28b485;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); }
+  .form__input:focus:invalid {
+    border-bottom: 3px solid #ff7730; }
+  .form__input::-webkit-input-placeholder {
+    color: #999; }
+
+.form__label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-left: 1.9rem;
+  display: block;
+  transition: all .3s; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
+
 .features-box {
   background-color: #fff;
   text-align: center;
@@ -297,7 +333,7 @@ body {
   .features-box__icon {
     font-size: 6rem;
     display: inline-block;
-    background-image: linear-gradient(to right, #55c57a, #28b485);
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
     -webkit-background-clip: text;
     color: transparent; }
   .features-box:hover {
@@ -378,7 +414,7 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.55), rgba(40, 180, 133, 0.6)), url("../img/kop-1.jpg");
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.55), rgba(40, 180, 133, 0.6)), url("../img/kop-1.jpg");
   background-size: cover;
   background-position: center;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
@@ -412,3 +448,16 @@ body {
 .section-reviews {
   padding: 15rem 0;
   position: relative; }
+
+.section-bookform {
+  padding: 15rem;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.93) 50%, transparent 50%), url(../img/20210225_112237.jpg);
+  height: 50rem;
+  background-size: cover;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); }
+  .book__form {
+    width: 50%;
+    padding: 6rem; }
