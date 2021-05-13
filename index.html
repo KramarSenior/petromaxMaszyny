@@ -15,9 +15,12 @@
 
 <body>
     <div class="navigation">
-        <div class="navigation__button">
-
-        </div>
+        <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
+        <label for="nav-toggle" class="navigation__button">
+            <span class="navigation__icon">
+                &nbsp;
+            </span>
+        </label>
         <div class="navigation__background">
 
         </div>
@@ -41,7 +44,7 @@
                     Maszyny dla twojego biznesu!
                 </span>
             </h1>
-            <a href="#" class="btn btn-white btn-animated">
+            <a href="#section-machines" class="btn btn-white btn-animated">
                 Dowiedz się więcej!
             </a>
         </div>
@@ -126,7 +129,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-machines">
+        <section class="section-machines" id="section-machines">
             <div class="u-text-center u-margin-bottom-big">
                 <h2 class="heading-secondary">
                     Nasze najnowsze modele
@@ -163,7 +166,7 @@
                                     300tys
                                 </div>
                                 <div class="card__back--button">
-                                    <a href="#" class="btn btn-white">Dowiedz się wiecej!</a>
+                                    <a href="#popup" class="btn btn-white">Dowiedz się wiecej!</a>
                                 </div>
                             </div>
 
@@ -200,7 +203,7 @@
                                     600tys
                                 </div>
                                 <div class="card__back--button">
-                                    <a href="#" class="btn btn-white">Dowiedz się wiecej!</a>
+                                    <a href="#popup" class="btn btn-white">Dowiedz się wiecej!</a>
                                 </div>
                             </div>
 
@@ -238,7 +241,7 @@
                                     900tys
                                 </div>
                                 <div class="card__back--button">
-                                    <a href="#" class="btn btn-white">Dowiedz się wiecej!</a>
+                                    <a href="#popup" class="btn btn-white">Dowiedz się wiecej!</a>
                                 </div>
                             </div>
 
@@ -247,7 +250,7 @@
                 </div>
             </div>
             <div class="u-text-center u-margin-bottom-small ">
-                <a href="#" class="btn btn--green">Zobacz pozostałe modele</a>
+                <a href="#" class="btn btn--yellow">Zobacz pozostałe modele</a>
             </div>
         </section>
 
@@ -368,7 +371,30 @@
             </div>
         </div>
     </footer>
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="popup__left">
+                <img src="img/kop-1.jpg" alt="Model koparki" class="popup__image">   
+                <img src="img/kop-3.jpg" alt="Model koparki" class="popup__image">   
+            </div>
+            <div class="popup__right">
+                <a href="#section-machines" class="popup__close">&times;</a>
 
+                <h2 class="heading-secondary u-margin-bottom-small">
+                    Model XYZ 2000
+                </h2>
+                <h3 class="heading-third u-margin-bottom-small">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae accusamus.
+                </h3>
+                <p class="popup__text u-margin-bottom-medium">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nihil nostrum nobis. Ut obcaecati repellat quo velit hic veritatis perferendis aspernatur quia deserunt quisquam! Voluptas labore consequuntur perspiciatis eaque ut.
+                    Nesciunt, dignissimos cumque. Saepe quos facilis eum sed ullam nemo eligendi, inventore corrupti quas explicabo omnis? Sint deserunt ad ab placeat beatae. Delectus at autem corporis ratione rerum veniam libero?
+                    Reprehenderit blanditiis ullam doloribus sapiente reiciendis, omnis commodi est doloremque consequuntur dicta sed nobis asperiores adipisci necessitatibus minima facilis esse expedita labore veniam dolorum repudiandae alias officiis? Officia, quisquam modi!
+                </p>
+                <a href="#" class="btn btn--green">Skontaktuj się z nami!</a>
+            </div>
+        </div>
+    </div>
     <!--
     <sction class="grid-test">
         <div class="row">

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Color Theme Swatches in Hex */
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -47,21 +48,22 @@ body {
   padding: 3rem; }
 
 .header--title__mainText {
-  color: #fff;
+  color: #000;
   top: 40%;
   left: 50%;
   margin-bottom: 6rem; }
   .header--title__mainText-main {
     display: block;
     font-size: 7.5rem;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 3.5rem;
     text-transform: uppercase;
     animation: moveInRight 1s; }
   .header--title__mainText-sub {
+    color: #fff;
     display: block;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 900;
     letter-spacing: 1.5rem;
     animation: moveInLeft 1s; }
 
@@ -69,7 +71,7 @@ body {
   font-size: 4.5rem;
   font-weight: 700;
   letter-spacing: 4px;
-  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  background-image: linear-gradient(to right, #F2E205, #999);
   display: inline-block;
   -webkit-background-clip: text;
   color: transparent;
@@ -146,6 +148,10 @@ body {
   background-color: #55c57a;
   color: #fff; }
 
+.btn--yellow {
+  background-color: #EAF205;
+  color: #000; }
+
 .btn-animated {
   animation: moveInBtn 0.5s ease-in-out 0.75s;
   animation-fill-mode: backwards; }
@@ -154,14 +160,14 @@ body {
   text-decoration: none;
   font-size: 2.75rem;
   font-weight: 700;
-  color: #55c57a;
+  color: #999;
   display: inline-block;
   padding: 3px;
   border-bottom: 1px solid #55c57a; }
 
 .btn-text:hover {
-  background-color: #55c57a;
-  color: #fff;
+  background-color: #EAF205;
+  color: #000;
   transition: all .2s;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   transform: translateY(-2px); }
@@ -208,15 +214,15 @@ body {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
     .card__background--1 {
-      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("../img/kop-3.jpg"); }
+      background-image: linear-gradient(to right bottom, #F2E205, #333), url("../img/kop-3.jpg"); }
     .card__background--2 {
-      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("../img/kop-3.jpg"); }
+      background-image: linear-gradient(to right bottom, #F2E205, #333), url("../img/kop-3.jpg"); }
     .card__background--3 {
-      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url("../img/kop-3.jpg"); }
+      background-image: linear-gradient(to right bottom, #F2E205, #333), url("../img/kop-3.jpg"); }
   .card__header {
     font-size: 3.1rem;
-    font-weight: 300;
-    color: #fff;
+    font-weight: 400;
+    color: #000;
     position: absolute;
     top: 12rem;
     right: 2rem;
@@ -227,11 +233,11 @@ body {
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone; }
     .card__header-span--1 {
-      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
+      background-image: linear-gradient(to right bottom, rgba(234, 242, 5, 0.85), rgba(242, 226, 5, 0.85)); }
     .card__header-span--2 {
-      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+      background-image: linear-gradient(to right bottom, rgba(234, 242, 5, 0.85), rgba(242, 226, 5, 0.85)); }
     .card__header-span--3 {
-      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
+      background-image: linear-gradient(to right bottom, rgba(234, 242, 5, 0.85), rgba(242, 226, 5, 0.85)); }
   .card__details {
     padding: 3rem; }
     .card__details ul {
@@ -360,6 +366,69 @@ body {
   .features-box:hover {
     transform: translateY(-10px) scale(1.09); }
 
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2500;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s; }
+  .popup__content {
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    height: 50rem;
+    display: table;
+    border-radius: 3px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all .4s .2s; }
+  .popup__left {
+    width: 33.333333%;
+    display: table-cell; }
+  .popup__right {
+    width: 66.666666%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 6rem; }
+  .popup__image {
+    width: 100%;
+    display: block; }
+  .popup__text {
+    font-size: 1.5rem;
+    column-count: 2;
+    column-gap: 5rem;
+    column-rule: 3px solid #f5f5f5;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup:target .popup__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
+  .popup__close:link, .popup__close:visited {
+    color: #333;
+    position: absolute;
+    top: 2.5rem;
+    right: 3rem;
+    font-size: 3rem;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1; }
+  .popup__close:hover {
+    color: #55c57a; }
+
 .review {
   background-color: rgba(255, 255, 255, 0.55);
   width: 75%;
@@ -462,7 +531,7 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.55), rgba(40, 180, 133, 0.6)), url("../img/kop-1.jpg");
+  background-image: linear-gradient(to right bottom, rgba(153, 153, 153, 0.55), rgba(242, 226, 5, 0.6)), url("../img/kop-1.jpg");
   background-size: cover;
   background-position: center;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
@@ -473,62 +542,118 @@ body {
     transform: translate(-50%, -50%);
     text-align: center; }
 
+.navigation__checkbox {
+  display: none;
+  visibility: hidden; }
+
 .navigation__button {
+  background-color: #fff;
   height: 7rem;
   width: 7rem;
   position: fixed;
   top: 6rem;
   right: 6rem;
-  background-color: #fff;
-  z-index: 2020;
-  border-radius: 50%; }
+  border-radius: 50%;
+  z-index: 2000;
+  text-align: center;
+  cursor: pointer; }
 
 .navigation__background {
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
   position: fixed;
   top: 6.5rem;
   right: 6.5rem;
   background-image: radial-gradient(#7ed56f, #28b485);
-  border-radius: 50%;
   z-index: 1000;
-  transform: scale(80); }
+  transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1); }
 
 .navigation__nav {
   height: 100vh;
-  width: 100%;
+  width: 0;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1500; }
+  z-index: 1500;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
 
 .navigation__list {
-  list-style: none;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 1005; }
 
 .navigation__item {
-  margin: 1rem;
-  text-align: center; }
+  margin: 1rem; }
 
-.navigation__link:visited, .navigation__link:link {
+.navigation__link:link, .navigation__link:visited {
   display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 4.5rem;
-  font-weight: 300;
-  color: #fff;
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
-  background-size: 240%;
-  transition: all 0.4s;
-  padding: 1rem 2rem; }
+  background-size: 231%;
+  transition: all 0.4s; }
 
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
-  transform: translateX(4rem);
-  color: #55c57a; }
+  color: #55c57a;
+  transform: translateX(2rem); }
+
+.navigation__link span {
+  margin-right: 1.5rem;
+  display: inline-block; }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80); }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%; }
+
+.navigation__icon {
+  position: relative;
+  margin-top: 3.5rem; }
+  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: #000;
+    display: inline-block; }
+  .navigation__icon::before, .navigation__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s; }
+  .navigation__icon::before {
+    top: -.8rem; }
+  .navigation__icon::after {
+    top: .8rem; }
+
+.navigation__butoon:hover .navigation__icon::before {
+  top: -1rem; }
+
+.navigation__butoon:hover .navigation__icon::after {
+  top: 1rem; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+  transform: rotate(135deg);
+  top: 0; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+  transform: rotate(-135deg);
+  top: 0; }
 
 .section-about {
   background-color: #f5f5f5;
@@ -536,7 +661,7 @@ body {
   margin-top: -25vh; }
 
 .section-features {
-  background-image: linear-gradient(to right, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.88)), url("../img/zdjęcia_maszyn/PETROMAX_920/20210225_111107.jpg");
+  background-image: linear-gradient(to right, rgba(153, 153, 153, 0.8), rgba(242, 226, 5, 0.6)), url("../img/zdjęcia_maszyn/PETROMAX_920/20210225_111107.jpg");
   padding: 20rem 0;
   background-size: cover;
   margin-top: -13rem;
@@ -556,7 +681,7 @@ body {
 
 .section-bookform {
   padding: 15rem;
-  background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+  background-image: linear-gradient(to right bottom, #999, #F2E205); }
 
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.93) 50%, transparent 50%), url(../img/20210225_112237.jpg);
