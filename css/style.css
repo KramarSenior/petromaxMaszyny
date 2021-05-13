@@ -176,6 +176,40 @@ body {
   transform: translateY(0px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
+.btn-sm, .btn-sm:link, .btn-sm:visited {
+  text-decoration: none;
+  padding: .8rem 4.5rem;
+  border-radius: 10rem;
+  transition: all 0.5s;
+  display: inline-block;
+  position: relative;
+  font-size: 1.75rem;
+  border: none; }
+
+.btn-sm:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+
+.btn-sm:active, .btn-sm:focus {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+
+.btn-sm-white {
+  background-color: #fff;
+  color: #777; }
+
+.btn-sm--green {
+  background-color: #55c57a;
+  color: #fff; }
+
+.btn-sm--yellow {
+  background-color: #EAF205;
+  color: #000; }
+
+.btn-sm-animated {
+  animation: moveInBtn 0.5s ease-in-out 0.75s;
+  animation-fill-mode: backwards; }
+
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
@@ -475,6 +509,37 @@ body {
   .review:hover .review__image {
     transform: translateX(-4rem) scale(1);
     filter: blur(3px) brightness(70%); }
+
+.cookies__background {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10000; }
+
+.cookies__content {
+  width: 100%;
+  position: fixed;
+  display: block;
+  bottom: 0;
+  right: 0;
+  background-color: #363839;
+  z-index: 10001;
+  padding: 1rem 0;
+  padding-left: 20rem;
+  display: table; }
+  .cookies__content--left {
+    width: 70%;
+    display: table-cell; }
+  .cookies__content--right {
+    width: 25%;
+    display: table-cell; }
+
+.cookies__text {
+  font-size: 1.4rem;
+  color: #999; }
 
 .footer {
   background-color: #333;
