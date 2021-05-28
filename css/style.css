@@ -652,8 +652,8 @@ body {
 .navigation {
   text-align: center;
   display: block;
-  padding: 1.5rem 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1rem 0;
+  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(242, 226, 5, 0.8), rgba(119, 119, 119, 0.6));
   z-index: 999999999999;
   position: fixed;
   top: 0;
@@ -668,22 +668,21 @@ body {
     text-decoration: none;
     text-align: center; }
     .navigation__item:not(:first-child) {
-      border-left: 2px solid #fff; }
+      border-left: 2px solid #000; }
   .navigation__link {
     text-transform: uppercase; }
     .navigation__link, .navigation__link:visited, .navigation__link:link {
       text-decoration: none;
-      color: white;
+      color: #000;
       display: inline-block;
-      font-size: 2rem;
-      font-weight: 700;
+      font-size: 1.7rem;
+      font-weight: 900;
       padding: 1rem 2rem;
       background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
       background-size: 231%;
       transition: all 0.4s; }
     .navigation__link:hover, .navigation__link:active {
-      background-position: 100%;
-      color: #000; }
+      background-position: 100%; }
 
 /*
 .navigation {
@@ -859,7 +858,25 @@ body {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.93) 50%, transparent 50%), url(../img/20210225_112237.jpg);
   height: 60rem;
   background-size: cover;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); }
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  position: relative; }
   .book__form {
     width: 50%;
     padding: 6rem; }
+  .book__phone {
+    position: absolute;
+    padding: 4rem 13.5rem;
+    top: 2rem;
+    right: 5%;
+    background-color: rgba(255, 255, 255, 0.8); }
+    .book__phone--number {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: #000;
+      transition: all 0.3s;
+      text-transform: uppercase; }
