@@ -34,7 +34,9 @@
   box-sizing: border-box; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+    scroll-behavior: smooth;
+}
 
 body {
   box-sizing: border-box;
@@ -312,6 +314,17 @@ body {
       font-size: 6rem;
       font-weight: 100;
       margin-bottom: 6rem; }
+
+.card-2 {
+  position: relative;
+  height: 52rem;
+  width: 30rem;
+  background-color: #F9F9F9;
+  border-radius: 3px;
+  text-align: center; }
+  .card-2__img {
+    padding-top: 4rem;
+    margin: 0 auto; }
 
 .about-us__machine-features {
   margin-left: 10rem; }
