@@ -35,8 +35,7 @@
 
 html {
   font-size: 62.5%;
-    scroll-behavior: smooth;
-}
+  scroll-behavior: smooth; }
 
 body {
   box-sizing: border-box;
@@ -110,10 +109,10 @@ body {
 .u-default-indent {
   text-indent: 6rem; }
 
-.u-margin-top-big {
+.u-margin-top-small {
   margin-top: 1.5rem; }
 
-.u-margin-top-big {
+.u-margin-top-medium {
   margin-top: 4rem; }
 
 .u-margin-top-big {
@@ -892,7 +891,7 @@ body {
 
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.93) 50%, transparent 50%), url(../img/20210225_112237.jpg);
-  height: 60rem;
+  height: 70rem;
   background-size: cover;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
   position: relative; }
